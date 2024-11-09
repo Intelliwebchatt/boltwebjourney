@@ -1,26 +1,14 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Newsletter from './components/Newsletter';
-import Paths from './components/Paths';
-import Footer from './components/Footer';
-import { Toaster } from './components/ui/Toaster';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './components/HomePage'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <Paths />
-        <Newsletter />
-      </main>
-      <Footer />
-      <Toaster />
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      {/* Add more routes as needed */}
+    </Routes>
+  )
 }
 
-export default App;
+export default App
